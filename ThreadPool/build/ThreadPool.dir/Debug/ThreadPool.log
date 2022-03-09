@@ -1,0 +1,40 @@
+﻿生成启动时间为 2022/3/9 12:05:32。
+     1>项目“D:\Learning\C++\ThreadPool\build\ThreadPool.vcxproj”在节点 2 上(Build 个目标)。
+     1>PreBuildEvent:
+         setlocal
+         cd D:\Learning\C++\ThreadPool\build
+         if %errorlevel% neq 0 goto :cmEnd
+         D:
+         if %errorlevel% neq 0 goto :cmEnd
+         E:\Cmake\bin\cmake.exe -E cmake_autogen D:/Learning/C++/ThreadPool/build/CMakeFiles/ThreadPool_autogen.dir/AutogenInfo.cmake Debug
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       CustomBuild:
+         Generating ui_threadpool.h
+         Building Custom Rule D:/Learning/C++/ThreadPool/CMakeLists.txt
+       ClCompile:
+         E:\VS2013\VC\bin\x86_amd64\CL.exe /c /ID:\Learning\C++\ThreadPool\build /ID:\Learning\C++\ThreadPool /ID:\Learning\C++\ThreadPool\build\ThreadPool_autogen\include_Debug /IE:\Qt5.10.0\5.10.0\msvc2017_64\include /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtWidgets /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtGui /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtANGLE /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtCore /I"E:\Qt5.10.0\5.10.0\msvc2017_64\.\mkspecs\win32-msvc" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"ThreadPool.dir\Debug\\" /Fd"ThreadPool.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt D:\Learning\C++\ThreadPool\build\ThreadPool_autogen\mocs_compilation.cpp D:\Learning\C++\ThreadPool\PoolCore.cpp D:\Learning\C++\ThreadPool\main.cpp D:\Learning\C++\ThreadPool\testtask.cpp D:\Learning\C++\ThreadPool\threadpool.cpp
+         mocs_compilation.cpp
+         PoolCore.cpp
+         main.cpp
+         testtask.cpp
+         threadpool.cpp
+         正在生成代码...
+       Link:
+         E:\VS2013\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Learning\C++\ThreadPool\build\Debug\ThreadPool.exe" /INCREMENTAL /NOLOGO E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Widgetsd.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Guid.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Learning/C++/ThreadPool/build/Debug/ThreadPool.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Learning/C++/ThreadPool/build/Debug/ThreadPool.lib" /MACHINE:X64  /machine:x64 ThreadPool.dir\Debug\mocs_compilation.obj
+         ThreadPool.dir\Debug\PoolCore.obj
+         ThreadPool.dir\Debug\main.obj
+         ThreadPool.dir\Debug\testtask.obj
+         ThreadPool.dir\Debug\threadpool.obj
+         ThreadPool.vcxproj -> D:\Learning\C++\ThreadPool\build\Debug\ThreadPool.exe
+     1>已完成生成项目“D:\Learning\C++\ThreadPool\build\ThreadPool.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:07.43

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F1BF4D57-F3B7-3C4B-AA0C-1843B4A11A91}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Learning\C++\SDR\build;D:\Learning\C++\SDR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Learning\C++\SDR\build;D:\Learning\C++\SDR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Learning\C++\SDR\build;D:\Learning\C++\SDR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Learning\C++\SDR\build;D:\Learning\C++\SDR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Learning\C++\SDR\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Learning/C++/SDR/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+E:\Cmake\bin\cmake.exe -SD:/Learning/C++/SDR -BD:/Learning/C++/SDR/build --check-stamp-file D:/Learning/C++/SDR/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCXXCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeRCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeParseArguments.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Learning\C++\SDR\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Learning/C++/SDR/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+E:\Cmake\bin\cmake.exe -SD:/Learning/C++/SDR -BD:/Learning/C++/SDR/build --check-stamp-file D:/Learning/C++/SDR/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCXXCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeRCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeParseArguments.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Learning\C++\SDR\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Learning/C++/SDR/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+E:\Cmake\bin\cmake.exe -SD:/Learning/C++/SDR -BD:/Learning/C++/SDR/build --check-stamp-file D:/Learning/C++/SDR/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCXXCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeRCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeParseArguments.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Learning\C++\SDR\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Learning/C++/SDR/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+E:\Cmake\bin\cmake.exe -SD:/Learning/C++/SDR -BD:/Learning/C++/SDR/build --check-stamp-file D:/Learning/C++/SDR/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeCXXCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeRCCompiler.cmake;D:\Learning\C++\SDR\build\CMakeFiles\3.15.5\CMakeSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeParseArguments.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;E:\Cmake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\Windows.cmake;E:\Cmake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;E:\Qt5.10.0\5.10.0\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Learning\C++\SDR\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Learning\C++\SDR\build\ZERO_CHECK.vcxproj">
+      <Project>{3B576D16-E48C-35AB-8F63-E2B3CE051E3C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Learning\C++\SDR\build\SDR.vcxproj">
+      <Project>{066E2AEC-33C3-3F32-8E90-B8F6326A7A2B}</Project>
+      <Name>SDR</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,22 @@
+﻿生成启动时间为 2022/3/8 16:15:13。
+     1>项目“D:\Learning\C++\Design Mode\DecoratorMode\build\DecoratorMode.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/Learning/C++/Design Mode/DecoratorMode/CMakeLists.txt
+       ClCompile:
+         E:\VS2013\VC\bin\CL.exe /c /I"D:\Learning\C++\Design Mode\DecoratorMode\build" /I"D:\Learning\C++\Design Mode\DecoratorMode" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"DecoratorMode.dir\Debug\\" /Fd"DecoratorMode.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\Learning\C++\Design Mode\DecoratorMode\ConcreteDecorator.cpp" "D:\Learning\C++\Design Mode\DecoratorMode\Decorator.cpp" "D:\Learning\C++\Design Mode\DecoratorMode\Person.cpp" "D:\Learning\C++\Design Mode\DecoratorMode\main.cpp"
+         ConcreteDecorator.cpp
+         Decorator.cpp
+         Person.cpp
+         main.cpp
+         正在生成代码...
+       Link:
+         E:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Learning\C++\Design Mode\DecoratorMode\build\Debug\DecoratorMode.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Learning/C++/Design Mode/DecoratorMode/build/Debug/DecoratorMode.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Learning/C++/Design Mode/DecoratorMode/build/Debug/DecoratorMode.lib" /MACHINE:X86 /SAFESEH  /machine:X86 DecoratorMode.dir\Debug\ConcreteDecorator.obj
+         DecoratorMode.dir\Debug\Decorator.obj
+         DecoratorMode.dir\Debug\Person.obj
+         DecoratorMode.dir\Debug\main.obj
+         DecoratorMode.vcxproj -> D:\Learning\C++\Design Mode\DecoratorMode\build\Debug\DecoratorMode.exe
+     1>已完成生成项目“D:\Learning\C++\Design Mode\DecoratorMode\build\DecoratorMode.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.98

@@ -1,0 +1,3 @@
+D:/Learning/C++/TetrisTest/build/CMakeFiles/TetrisTest.dir
+D:/Learning/C++/TetrisTest/build/CMakeFiles/ALL_BUILD.dir
+D:/Learning/C++/TetrisTest/build/CMakeFiles/ZERO_CHECK.dir

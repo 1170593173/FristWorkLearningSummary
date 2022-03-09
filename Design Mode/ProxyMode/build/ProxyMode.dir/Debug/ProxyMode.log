@@ -1,0 +1,15 @@
+﻿生成启动时间为 2022/3/8 16:23:59。
+     1>项目“D:\Learning\C++\Design Mode\ProxyMode\build\ProxyMode.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/Learning/C++/Design Mode/ProxyMode/CMakeLists.txt
+       ClCompile:
+         E:\VS2013\VC\bin\CL.exe /c /I"D:\Learning\C++\Design Mode\ProxyMode\build" /I"D:\Learning\C++\Design Mode\ProxyMode" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"ProxyMode.dir\Debug\\" /Fd"ProxyMode.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\Learning\C++\Design Mode\ProxyMode\main.cpp"
+         main.cpp
+       Link:
+         E:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Learning\C++\Design Mode\ProxyMode\build\Debug\ProxyMode.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Learning/C++/Design Mode/ProxyMode/build/Debug/ProxyMode.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Learning/C++/Design Mode/ProxyMode/build/Debug/ProxyMode.lib" /MACHINE:X86 /SAFESEH  /machine:X86 ProxyMode.dir\Debug\main.obj
+         ProxyMode.vcxproj -> D:\Learning\C++\Design Mode\ProxyMode\build\Debug\ProxyMode.exe
+     1>已完成生成项目“D:\Learning\C++\Design Mode\ProxyMode\build\ProxyMode.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.12

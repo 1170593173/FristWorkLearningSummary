@@ -1,0 +1,2 @@
+#define TestCmake_VERSION_MAHOR @TestCmake_VERSION_MAHOR@
+#define TestCMake_VERSION_MINOR @TestCMake_VERSION_MINOR@

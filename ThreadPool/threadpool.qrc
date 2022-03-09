@@ -1,0 +1,4 @@
+<RCC>
+    <qresource prefix="ThreadPool">
+    </qresource>
+</RCC>

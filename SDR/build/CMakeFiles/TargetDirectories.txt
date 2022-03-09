@@ -1,0 +1,3 @@
+D:/Learning/C++/SDR/build/CMakeFiles/SDR.dir
+D:/Learning/C++/SDR/build/CMakeFiles/ALL_BUILD.dir
+D:/Learning/C++/SDR/build/CMakeFiles/ZERO_CHECK.dir

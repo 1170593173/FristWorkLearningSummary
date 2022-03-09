@@ -1,0 +1,24 @@
+# CMake generation dependency list for this directory.
+D:/Learning/C++/Design Mode/FactoryMethodMode/CMakeLists.txt
+D:/Learning/C++/Design Mode/FactoryMethodMode/Version.h.in
+D:/Learning/C++/Design Mode/FactoryMethodMode/build/CMakeFiles/3.15.5/CMakeCCompiler.cmake
+D:/Learning/C++/Design Mode/FactoryMethodMode/build/CMakeFiles/3.15.5/CMakeCXXCompiler.cmake
+D:/Learning/C++/Design Mode/FactoryMethodMode/build/CMakeFiles/3.15.5/CMakeRCCompiler.cmake
+D:/Learning/C++/Design Mode/FactoryMethodMode/build/CMakeFiles/3.15.5/CMakeSystem.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeCInformation.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeCXXInformation.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeCommonLanguageInclude.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeGenericSystem.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeInitializeConfigs.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeLanguageInformation.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeRCInformation.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeSystemSpecificInformation.cmake
+E:/Cmake/share/cmake-3.15/Modules/CMakeSystemSpecificInitialize.cmake
+E:/Cmake/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+E:/Cmake/share/cmake-3.15/Modules/Compiler/MSVC-C.cmake
+E:/Cmake/share/cmake-3.15/Modules/Compiler/MSVC-CXX.cmake
+E:/Cmake/share/cmake-3.15/Modules/Platform/Windows-MSVC-C.cmake
+E:/Cmake/share/cmake-3.15/Modules/Platform/Windows-MSVC-CXX.cmake
+E:/Cmake/share/cmake-3.15/Modules/Platform/Windows-MSVC.cmake
+E:/Cmake/share/cmake-3.15/Modules/Platform/Windows.cmake
+E:/Cmake/share/cmake-3.15/Modules/Platform/WindowsPaths.cmake

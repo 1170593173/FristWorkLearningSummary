@@ -1,0 +1,18 @@
+﻿生成启动时间为 2022/3/8 18:38:41。
+     1>项目“D:\Learning\C++\Design Mode\ThreadPoolTestV2\build\DecoratorMode.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/Learning/C++/Design Mode/ThreadPoolTestV2/CMakeLists.txt
+       ClCompile:
+         E:\VS2013\VC\bin\CL.exe /c /I"D:\Learning\C++\Design Mode\ThreadPoolTestV2\build" /I"D:\Learning\C++\Design Mode\ThreadPoolTestV2" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"DecoratorMode.dir\Debug\\" /Fd"DecoratorMode.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\Learning\C++\Design Mode\ThreadPoolTestV2\main.cpp" "D:\Learning\C++\Design Mode\ThreadPoolTestV2\thread_poolV2.cpp"
+         main.cpp
+         thread_poolV2.cpp
+         正在生成代码...
+       Link:
+         E:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Learning\C++\Design Mode\ThreadPoolTestV2\build\Debug\DecoratorMode.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Learning/C++/Design Mode/ThreadPoolTestV2/build/Debug/DecoratorMode.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Learning/C++/Design Mode/ThreadPoolTestV2/build/Debug/DecoratorMode.lib" /MACHINE:X86 /SAFESEH  /machine:X86 DecoratorMode.dir\Debug\main.obj
+         DecoratorMode.dir\Debug\thread_poolV2.obj
+         DecoratorMode.vcxproj -> D:\Learning\C++\Design Mode\ThreadPoolTestV2\build\Debug\DecoratorMode.exe
+     1>已完成生成项目“D:\Learning\C++\Design Mode\ThreadPoolTestV2\build\DecoratorMode.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.38

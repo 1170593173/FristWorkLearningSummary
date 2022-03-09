@@ -1,0 +1,40 @@
+﻿生成启动时间为 2022/3/9 11:33:26。
+     1>项目“D:\Learning\C++\SDR\build\SDR.vcxproj”在节点 2 上(Build 个目标)。
+     1>PreBuildEvent:
+         setlocal
+         cd D:\Learning\C++\SDR\build
+         if %errorlevel% neq 0 goto :cmEnd
+         D:
+         if %errorlevel% neq 0 goto :cmEnd
+         E:\Cmake\bin\cmake.exe -E cmake_autogen D:/Learning/C++/SDR/build/CMakeFiles/SDR_autogen.dir/AutogenInfo.cmake Debug
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       ClCompile:
+         E:\VS2013\VC\bin\x86_amd64\CL.exe /c /ID:\Learning\C++\SDR\build /ID:\Learning\C++\SDR /ID:\Learning\C++\SDR\build\SDR_autogen\include_Debug /IE:\Qt5.10.0\5.10.0\msvc2017_64\include /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtWidgets /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtGui /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtANGLE /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtCore /I"E:\Qt5.10.0\5.10.0\msvc2017_64\.\mkspecs\win32-msvc" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"SDR.dir\Debug\\" /Fd"SDR.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt D:\Learning\C++\SDR\main.cpp
+         main.cpp
+     1>D:\Learning\C++\SDR\main.cpp(16): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 E:\VS2013\VC\include\stdlib.h(911) : 参见“_sleep”的声明
+       Link:
+         E:\VS2013\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Learning\C++\SDR\build\Debug\SDR.exe" /INCREMENTAL /NOLOGO E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Widgetsd.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Guid.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Learning/C++/SDR/build/Debug/SDR.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Learning/C++/SDR/build/Debug/SDR.lib" /MACHINE:X64  /machine:x64 SDR.dir\Debug\mocs_compilation.obj
+         SDR.dir\Debug\MyContext.obj
+         "SDR.dir\Debug\MySingleTon-queue.obj"
+         SDR.dir\Debug\MySingleTon.obj
+         SDR.dir\Debug\MySwitch.obj
+         SDR.dir\Debug\SDR.obj
+         SDR.dir\Debug\SDR_Engine.obj
+         SDR.dir\Debug\StateMachine.obj
+         SDR.dir\Debug\main.obj
+         SDR.dir\Debug\thread_pool.obj
+         SDR.dir\Debug\thread_test.obj
+         SDR.vcxproj -> D:\Learning\C++\SDR\build\Debug\SDR.exe
+     1>已完成生成项目“D:\Learning\C++\SDR\build\SDR.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.92

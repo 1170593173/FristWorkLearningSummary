@@ -1,0 +1,56 @@
+﻿生成启动时间为 2022/3/8 18:24:57。
+     1>项目“D:\Learning\C++\Design Mode\SingelTon\build\SingelTon.vcxproj”在节点 2 上(Build 个目标)。
+     1>PreBuildEvent:
+         setlocal
+         cd "D:\Learning\C++\Design Mode\SingelTon\build"
+         if %errorlevel% neq 0 goto :cmEnd
+         D:
+         if %errorlevel% neq 0 goto :cmEnd
+         E:\Cmake\bin\cmake.exe -E cmake_autogen "D:/Learning/C++/Design Mode/SingelTon/build/CMakeFiles/SingelTon_autogen.dir/AutogenInfo.cmake" Debug
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       CustomBuild:
+         Generating ui_SDR.h
+         Building Custom Rule D:/Learning/C++/Design Mode/SingelTon/CMakeLists.txt
+       ClCompile:
+         E:\VS2013\VC\bin\x86_amd64\CL.exe /c /I"D:\Learning\C++\Design Mode\SingelTon\build" /I"D:\Learning\C++\Design Mode\SingelTon" /I"D:\Learning\C++\Design Mode\SingelTon\build\SingelTon_autogen\include_Debug" /IE:\Qt5.10.0\5.10.0\msvc2017_64\include /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtWidgets /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtGui /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtANGLE /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtCore /I"E:\Qt5.10.0\5.10.0\msvc2017_64\.\mkspecs\win32-msvc" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"SingelTon.dir\Debug\\" /Fd"SingelTon.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt "D:\Learning\C++\Design Mode\SingelTon\build\SingelTon_autogen\mocs_compilation.cpp" "D:\Learning\C++\Design Mode\SingelTon\MySingleTon.cpp" "D:\Learning\C++\Design Mode\SingelTon\SDR.cpp" "D:\Learning\C++\Design Mode\SingelTon\SDR_Engine.cpp" "D:\Learning\C++\Design Mode\SingelTon\StateMachine.cpp" "D:\Learning\C++\Design Mode\SingelTon\main.cpp" "D:\Learning\C++\Design Mode\SingelTon\thread_test.cpp"
+         mocs_compilation.cpp
+         MySingleTon.cpp
+         SDR.cpp
+         SDR_Engine.cpp
+     1>D:\Learning\C++\Design Mode\SingelTon\SDR_Engine.cpp(44): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 E:\VS2013\VC\include\stdlib.h(911) : 参见“_sleep”的声明
+         StateMachine.cpp
+         main.cpp
+     1>D:\Learning\C++\Design Mode\SingelTon\main.cpp(14): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 E:\VS2013\VC\include\stdlib.h(911) : 参见“_sleep”的声明
+         thread_test.cpp
+     1>D:\Learning\C++\Design Mode\SingelTon\thread_test.cpp(17): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 E:\VS2013\VC\include\stdlib.h(911) : 参见“_sleep”的声明
+     1>D:\Learning\C++\Design Mode\SingelTon\thread_test.cpp(25): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 E:\VS2013\VC\include\stdlib.h(911) : 参见“_sleep”的声明
+     1>D:\Learning\C++\Design Mode\SingelTon\thread_test.cpp(35): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 E:\VS2013\VC\include\stdlib.h(911) : 参见“_sleep”的声明
+     1>D:\Learning\C++\Design Mode\SingelTon\thread_test.cpp(39): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 E:\VS2013\VC\include\stdlib.h(911) : 参见“_sleep”的声明
+         正在生成代码...
+       Link:
+         E:\VS2013\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Learning\C++\Design Mode\SingelTon\build\Debug\SingelTon.exe" /INCREMENTAL /NOLOGO E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Widgetsd.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Guid.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Learning/C++/Design Mode/SingelTon/build/Debug/SingelTon.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Learning/C++/Design Mode/SingelTon/build/Debug/SingelTon.lib" /MACHINE:X64  /machine:x64 SingelTon.dir\Debug\mocs_compilation.obj
+         SingelTon.dir\Debug\MySingleTon.obj
+         SingelTon.dir\Debug\SDR.obj
+         SingelTon.dir\Debug\SDR_Engine.obj
+         SingelTon.dir\Debug\StateMachine.obj
+         SingelTon.dir\Debug\main.obj
+         SingelTon.dir\Debug\thread_test.obj
+         SingelTon.vcxproj -> D:\Learning\C++\Design Mode\SingelTon\build\Debug\SingelTon.exe
+     1>已完成生成项目“D:\Learning\C++\Design Mode\SingelTon\build\SingelTon.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:06.08

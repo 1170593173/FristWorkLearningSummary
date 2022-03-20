@@ -58,27 +58,27 @@ void Nextblock_Area::draw_block()
 	default://case 0
 		a = 1; b = 2;
 		oneblock = group[a][b];
-		b_ptr = std::make_shared<shape1>(a,b,oneblock, group);
+		b_ptr = std::make_shared<OneGlyph>(a,b,oneblock, group);
 		break;
 	case 1:
 		a = 1; b = 1;
 		oneblock = group[a][b];
-		b_ptr = std::make_shared<shape2>(a, b, oneblock, group);
+		b_ptr = std::make_shared<SevenGlyph>(a, b, oneblock, group);
 		break;
 	case 2:
 		a = 3; b = 2;
 		oneblock = group[a][b];
-		b_ptr = std::make_shared<shape3>(a, b, oneblock, group);
+		b_ptr = std::make_shared<SoilGlyph>(a, b, oneblock, group);
 		break;
 	case 3:
 		a = 2; b = 1;
 		oneblock = group[a][b];
-		b_ptr = std::make_shared<shape4>(a, b, oneblock, group);
+		b_ptr = std::make_shared<StepGlyph>(a, b, oneblock, group);
 		break;
 	case 4:
 		a = 2; b = 1;
 		oneblock = group[a][b];
-		b_ptr = std::make_shared<shape5>(a, b, oneblock,group);
+		b_ptr = std::make_shared<FieldGlyph>(a, b, oneblock,group);
 		break;
 	}
 	b_ptr->CreateBlocks(painter);

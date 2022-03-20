@@ -51,6 +51,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton_left;
     QPushButton *pushButton;
+    QPushButton *pushButton_overturn;
     QPushButton *pushButton_right;
     QPushButton *pushButton_down;
     QMenuBar *menuBar;
@@ -61,7 +62,7 @@ public:
     {
         if (TetrisClass->objectName().isEmpty())
             TetrisClass->setObjectName(QStringLiteral("TetrisClass"));
-        TetrisClass->resize(276, 443);
+        TetrisClass->resize(494, 721);
         centralWidget = new QWidget(TetrisClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout_2 = new QVBoxLayout(centralWidget);
@@ -162,6 +163,11 @@ public:
 
         horizontalLayout_3->addWidget(pushButton);
 
+        pushButton_overturn = new QPushButton(centralWidget);
+        pushButton_overturn->setObjectName(QStringLiteral("pushButton_overturn"));
+
+        horizontalLayout_3->addWidget(pushButton_overturn);
+
         pushButton_right = new QPushButton(centralWidget);
         pushButton_right->setObjectName(QStringLiteral("pushButton_right"));
 
@@ -181,7 +187,7 @@ public:
         TetrisClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TetrisClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 276, 23));
+        menuBar->setGeometry(QRect(0, 0, 494, 23));
         TetrisClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(TetrisClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -204,6 +210,7 @@ public:
         label->setText(QApplication::translate("TetrisClass", "\345\205\263\345\215\2411", nullptr));
         pushButton_left->setText(QApplication::translate("TetrisClass", "left", nullptr));
         pushButton->setText(QApplication::translate("TetrisClass", "rotate", nullptr));
+        pushButton_overturn->setText(QApplication::translate("TetrisClass", "overturn", nullptr));
         pushButton_right->setText(QApplication::translate("TetrisClass", "right", nullptr));
         pushButton_down->setText(QApplication::translate("TetrisClass", "down", nullptr));
     } // retranslateUi

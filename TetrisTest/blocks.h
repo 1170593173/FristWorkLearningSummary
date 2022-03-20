@@ -21,6 +21,7 @@ public:
 
 	virtual void CreateBlocks(QPainter &painter,int m_switch=0) {};
 	virtual void rotate(int &block_x, int &block_y, int &swicth) {};
+	virtual void overturn(int &block_x, int &block_y, int &swicth ) {};
 	virtual void setFull(int mswitch) {};
 	virtual ~blocks() {};
 	void setCoordinate(int x, int y, int width, int hight);
@@ -37,11 +38,11 @@ private:
 };
 
 //ºáÌõ
-class shape1:public blocks
+class OneGlyph:public blocks
 {
 public:
-	shape1::shape1(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock ,m_grid){}
-	shape1::~shape1(){}
+	OneGlyph::OneGlyph(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock ,m_grid){}
+	OneGlyph::~OneGlyph(){}
 	void CreateBlocks(QPainter &painter, int m_switch = 0);
 	void rotate(int &block_x, int &block_y, int &swicth);
 	bool isInrange(int mswitch/*const std::vector<std::vector<OneBlock>> &grid*/);
@@ -52,25 +53,42 @@ private:
 };
 
 //Æß×Ö
-class shape2 :public blocks
+class SevenGlyph :public blocks
 {
 public:
-	shape2::shape2(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
-	shape2::~shape2()
+	SevenGlyph::SevenGlyph(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
+	SevenGlyph::~SevenGlyph()
 	{
 	}
 	void CreateBlocks(QPainter &painter, int m_switch = 0);
 	bool isInrange(int mswitch/*const std::vector<std::vector<OneBlock>> &grid*/);
 	void rotate(int &block_x, int &block_y, int &swicth);
 	void setFull(int mswitch/*const std::vector<std::vector<OneBlock>> &grid)*/);
+	void overturn(int &block_x, int &block_y, int &swicth);
 };
 
+
+////Æß×Ö¾µÏñ
+//class SevenGlyphOverTurn :public blocks
+//{
+//public:
+//	SevenGlyphOverTurn::SevenGlyphOverTurn(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
+//	SevenGlyphOverTurn::~SevenGlyphOverTurn()
+//	{
+//	}
+//	void CreateBlocks(QPainter &painter, int m_switch = 0);
+//	bool isInrange(int mswitch/*const std::vector<std::vector<OneBlock>> &grid*/);
+//	void rotate(int &block_x, int &block_y, int &swicth);
+//	void setFull(int mswitch/*const std::vector<std::vector<OneBlock>> &grid)*/);
+//	void overturn(int &block_x, int &block_y, int &swicth);
+//};
+
 //ÍÁ×Ö
-class shape3 :public blocks
+class SoilGlyph :public blocks
 {
 public:
-	shape3::shape3(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
-	shape3::~shape3()
+	SoilGlyph::SoilGlyph(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
+	SoilGlyph::~SoilGlyph()
 	{
 	}
 	void CreateBlocks(QPainter &painter, int m_switch = 0);
@@ -80,11 +98,25 @@ public:
 };
 
 //Ì¨½××Ö
-class shape4 :public blocks
+class StepGlyph :public blocks
 {
 public:
-	shape4::shape4(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
-	shape4::~shape4(){}
+	StepGlyph::StepGlyph(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
+	StepGlyph::~StepGlyph(){}
+	void CreateBlocks(QPainter &painter, int m_switch = 0);
+	bool isInrange(int mswitch/*const std::vector<std::vector<OneBlock>> &grid*/);
+	void rotate(int &block_x, int &block_y, int &swicth);
+	void setFull(int mswitch/*const std::vector<std::vector<OneBlock>> &grid)*/);
+	void overturn(int &block_x, int &block_y, int &swicth);
+};
+
+
+//Ì¨½××Ö¾µÏñ
+class StepGlyphOverTurn :public blocks
+{
+public:
+	StepGlyphOverTurn::StepGlyphOverTurn(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
+	StepGlyphOverTurn::~StepGlyphOverTurn(){}
 	void CreateBlocks(QPainter &painter, int m_switch = 0);
 	bool isInrange(int mswitch/*const std::vector<std::vector<OneBlock>> &grid*/);
 	void rotate(int &block_x, int &block_y, int &swicth);
@@ -92,11 +124,11 @@ public:
 };
 
 //Ìï×Ö
-class shape5 :public blocks
+class FieldGlyph :public blocks
 {
 public:
-	shape5::shape5(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
-	shape5::~shape5(){}
+	FieldGlyph::FieldGlyph(int x, int y, OneBlock &oneblock, std::vector<std::vector<OneBlock>> &m_grid) : blocks(x, y, oneblock, m_grid) {}
+	FieldGlyph::~FieldGlyph(){}
 	void CreateBlocks(QPainter &painter, int m_switch = 0);
 	bool isInrange(int mswitch/*const std::vector<std::vector<OneBlock>> &grid*/);
 	void rotate(int &block_x, int &block_y, int &swicth);

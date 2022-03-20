@@ -1,8 +1,6 @@
 #include "Mainblock_Area.h"
 
 
-
-
 Mainblock_Area::Mainblock_Area(QWidget* m_widget)
 {
 	timer = new QTimer(this);
@@ -23,7 +21,7 @@ Mainblock_Area::Mainblock_Area(QWidget* m_widget)
 	//int a, b;
 	//a = 1; b = 2;
 	//oneblock = MainGroup[a][b];
-	//b_ptr = std::make_shared<shape1>(a, b, oneblock, MainGroup);
+	//b_ptr = std::make_shared<OneGlyph>(a, b, oneblock, MainGroup);
 	//ui.setupUi(this);
 	//bool isok = connect(timer, SIGNAL(timeout()), this, SLOT(MainUpdate()));
 	//timer->start(1000);
@@ -78,20 +76,23 @@ void Mainblock_Area::paintEvent(QPaintEvent *event) {
 	switch (flag)
 	{
 	default://case 0
-		b_ptr = std::make_shared<shape1>(block_x, block_y, oneblock, MainGroup);
+		b_ptr = std::make_shared<OneGlyph>(block_x, block_y, oneblock, MainGroup);
 		break;
 	case 1:
-		b_ptr = std::make_shared<shape2>(block_x, block_y, oneblock, MainGroup);
+		b_ptr = std::make_shared<SevenGlyph>(block_x, block_y, oneblock, MainGroup);
 		break;
 	case 2:
-		b_ptr = std::make_shared<shape3>(block_x, block_y, oneblock, MainGroup);
+		b_ptr = std::make_shared<SoilGlyph>(block_x, block_y, oneblock, MainGroup);
 		break;
 	case 3:
-		b_ptr = std::make_shared<shape4>(block_x, block_y, oneblock, MainGroup);
+		b_ptr = std::make_shared<StepGlyph>(block_x, block_y, oneblock, MainGroup);
 		break;
 	case 4:
-		b_ptr = std::make_shared<shape5>(block_x, block_y, oneblock, MainGroup);
+		b_ptr = std::make_shared<FieldGlyph>(block_x, block_y, oneblock, MainGroup);
 		break;
+	//case 5:
+	//	b_ptr = std::make_shared<SevenGlyphOverTurn>(block_x, block_y, oneblock, MainGroup);
+	//	break;
 	}
 	b_ptr->CreateBlocks(painter, swicth);
 	update();
@@ -192,6 +193,10 @@ void Mainblock_Area::rotate() {
 	b_ptr->rotate(block_x, block_y, swicth);
 }
 
+void Mainblock_Area::overturn(){
+	b_ptr->overturn(block_x, block_y, swicth);
+}
+
 void Mainblock_Area::down() {
 	b_ptr->grid = MainGroup;
 
@@ -200,7 +205,11 @@ void Mainblock_Area::down() {
 	if ((b_ptr->getState() == 1 && b_ptr->isInrange(1))
 		|| (b_ptr->getState() == 0 && b_ptr->isInrange(0))
 		|| (b_ptr->getState() == 2 && b_ptr->isInrange(2))
-		|| (b_ptr->getState() == 3 && b_ptr->isInrange(3)))
+		|| (b_ptr->getState() == 3 && b_ptr->isInrange(3))
+		|| (b_ptr->getState() == 4 && b_ptr->isInrange(4))
+		|| (b_ptr->getState() == 5 && b_ptr->isInrange(5))
+		|| (b_ptr->getState() == 6 && b_ptr->isInrange(6))
+		|| (b_ptr->getState() == 7 && b_ptr->isInrange(7)))
 	{
 		block_x = b_ptr->grid_x;
 		block_y = b_ptr->grid_y;
@@ -225,7 +234,11 @@ void Mainblock_Area::translationtoLeft() {
 	if ((b_ptr->getState() == 1 && b_ptr->isInrange(1))
 		|| (b_ptr->getState() == 0 && b_ptr->isInrange(0))
 		|| (b_ptr->getState() == 2 && b_ptr->isInrange(2))
-		|| (b_ptr->getState() == 3 && b_ptr->isInrange(3)))
+		|| (b_ptr->getState() == 3 && b_ptr->isInrange(3))
+		|| (b_ptr->getState() == 4 && b_ptr->isInrange(4))
+		|| (b_ptr->getState() == 5 && b_ptr->isInrange(5))
+		|| (b_ptr->getState() == 6 && b_ptr->isInrange(6))
+		|| (b_ptr->getState() == 7 && b_ptr->isInrange(7)))
 	{
 		block_x = b_ptr->grid_x;
 		block_y = b_ptr->grid_y;
@@ -242,7 +255,11 @@ void Mainblock_Area::translationtoRight() {
 	if((b_ptr->getState() == 1 && b_ptr->isInrange(1)) 
 		|| (b_ptr->getState() == 0 && b_ptr->isInrange(0))
 		|| (b_ptr->getState() == 2 && b_ptr->isInrange(2))
-		|| (b_ptr->getState() == 3 && b_ptr->isInrange(3)))
+		|| (b_ptr->getState() == 3 && b_ptr->isInrange(3))
+		|| (b_ptr->getState() == 4 && b_ptr->isInrange(4))
+		|| (b_ptr->getState() == 5 && b_ptr->isInrange(5))
+		|| (b_ptr->getState() == 6 && b_ptr->isInrange(6))
+		|| (b_ptr->getState() == 7 && b_ptr->isInrange(7)))
 	{
 		block_x = b_ptr->grid_x;
 		block_y = b_ptr->grid_y;

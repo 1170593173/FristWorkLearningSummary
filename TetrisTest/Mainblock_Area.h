@@ -39,6 +39,7 @@ private:
 	
 public slots:
 	void rotate();
+	void overturn();
 	void down();
 
 	void translationtoLeft();

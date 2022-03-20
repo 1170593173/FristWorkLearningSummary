@@ -12,7 +12,7 @@ int blocks::getState() {
 }
 
 /***************************************ºáÌõ***************************************/
-void shape1::CreateBlocks(QPainter &painter,int mswitch)
+void OneGlyph::CreateBlocks(QPainter &painter,int mswitch)
 {
 	painter.setRenderHint(QPainter::Antialiasing, true);
 	// ÉèÖÃ»­±ÊÑÕÉ«¡¢¿í¶È
@@ -40,7 +40,7 @@ void shape1::CreateBlocks(QPainter &painter,int mswitch)
 	}
 }
 
-bool shape1::isInrange(int mswitch) {
+bool OneGlyph::isInrange(int mswitch) {
 
 	if (grid.empty())
 	{
@@ -77,7 +77,7 @@ bool shape1::isInrange(int mswitch) {
 
 }
 
-void shape1::setFull(int mswitch) {
+void OneGlyph::setFull(int mswitch) {
 
 	if (grid.empty())
 	{
@@ -100,7 +100,7 @@ void shape1::setFull(int mswitch) {
 
 }
 
-void shape1::rotate(int &block_x,int &block_y,int &swicth) {
+void OneGlyph::rotate(int &block_x,int &block_y,int &swicth) {
 	if (getState() == 0)//ÓÉºá±äÊú
 	{
 		std::vector<int>changex = { 2,2,2,2 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
@@ -146,7 +146,7 @@ void shape1::rotate(int &block_x,int &block_y,int &swicth) {
 
 
 /***************************************Æß×Ö***************************************/
-void shape2::CreateBlocks(QPainter &painter, int mswitch)//±£Ö¤ÊÇĞÎ×´µÄ×óÉÏ½Ç×÷»­
+void SevenGlyph::CreateBlocks(QPainter &painter, int mswitch)//±£Ö¤ÊÇĞÎ×´µÄ×óÉÏ½Ç×÷»­
 {
 	painter.setRenderHint(QPainter::Antialiasing, true);
 	// ÉèÖÃ»­±ÊÑÕÉ«¡¢¿í¶È
@@ -185,22 +185,47 @@ void shape2::CreateBlocks(QPainter &painter, int mswitch)//±£Ö¤ÊÇĞÎ×´µÄ×óÉÏ½Ç×÷»
 		painter.drawRect(m_x - m_width, m_y + m_hight*2, m_width, m_hight);
 		state = 3;
 		break;
+
+	case 4://Ä¬ÈÏ×´Ì¬£¬Ò²¾ÍÊÇ³õÊ¼ĞÎ×´µÄ¾µÏñ
+		painter.drawRect(m_x, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width * 2, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width * 2, m_y - m_hight, m_width, m_hight);
+		state = 4;
+		break;
+
+	case 5://Ë³Ê±ÕëĞı×ª90£¨¾µÏñ£©
+		painter.drawRect(m_x, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y + m_hight, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y + m_hight * 2, m_width, m_hight);
+		state = 5;
+		break;
+	case 6://Ë³Ê±ÕëĞı×ª180£¨¾µÏñ£©
+		painter.drawRect(m_x, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y, m_width, m_hight);
+		painter.drawRect(m_x, m_y + m_hight, m_width, m_hight);
+		painter.drawRect(m_x + m_width * 2, m_y, m_width, m_hight);
+		state = 6;
+		break;
+
+	case 7://Ë³Ê±ÕëĞı×ª270£¨¾µÏñ£©
+		painter.drawRect(m_x, m_y, m_width, m_hight);
+		painter.drawRect(m_x, m_y + m_hight, m_width, m_hight);
+		painter.drawRect(m_x, m_y + m_hight * 2, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y + m_hight * 2, m_width, m_hight);
+		state = 7;
+		break;
 	}
 }
 
-bool shape2::isInrange(int mswitch) {
+bool SevenGlyph::isInrange(int mswitch) {
 
 	if (grid.empty())
 	{
 		return false;
 	}
-	//bool x_isInrange = grid_x >= 0 && grid_x < grid.size();//xÊÇ·ñÔ½½ç
-	//bool y_isInrange = grid_y >= 0 && grid_y+4 < grid[grid.size() - 1].size();//Êú×ÅÊÇ·ñÔ½½ç
-	//bool iscollision = 
-	//	grid[grid_x][grid_y].isfull || 
-	//	grid[grid_x][grid_y+1].isfull || 
-	//	grid[grid_x][grid_y+2].isfull || 
-	//	grid[grid_x][grid_y+3].isfull;//ÊÇ·ñ·¢ÉúÅö×²
+
 	if (mswitch == 0)
 	{
 		return (grid_x >= 0 && grid_x + 2 < grid.size())
@@ -230,7 +255,8 @@ bool shape2::isInrange(int mswitch) {
 					grid[grid_x + 2][grid_y].isfull ||
 					grid[grid_x + 2][grid_y + 1].isfull)
 				);
-	}else 
+	}
+	else if (mswitch == 3)
 	{
 		return (grid_x - 1 >= 0 && grid_x  < grid.size())
 			&& (grid_y >= 0 && grid_y + 2 < grid[grid.size() - 1].size())
@@ -241,9 +267,52 @@ bool shape2::isInrange(int mswitch) {
 					grid[grid_x - 1][grid_y + 2].isfull)
 				);
 	}
+	
+	/*¾µÏñ*/
+	else if (mswitch == 4)
+	{
+		return (grid_x >= 0 && grid_x + 2 < grid.size())
+			&& (grid_y - 1 >= 0 && grid_y < grid[grid.size() - 1].size())
+			&& (!(grid[grid_x][grid_y].isfull ||
+			grid[grid_x + 1][grid_y].isfull ||
+			grid[grid_x + 2][grid_y].isfull ||
+			grid[grid_x + 2][grid_y - 1].isfull)
+			);
+	}
+	else if (mswitch == 5) {
+		return (grid_x >= 0 && grid_x + 1 < grid.size())
+			&& (grid_y >= 0 && grid_y + 2 < grid[grid.size() - 1].size())
+			&& (!
+			(grid[grid_x][grid_y].isfull ||
+			grid[grid_x + 1][grid_y].isfull ||
+			grid[grid_x + 1][grid_y + 1].isfull ||
+			grid[grid_x + 1][grid_y + 2].isfull)
+			);
+	}
+	else if (mswitch == 6) {
+		return (grid_x >= 0 && grid_x + 2 < grid.size())
+			&& (grid_y >= 0 && grid_y + 1 < grid[grid.size() - 1].size())
+			&& (!
+			(grid[grid_x][grid_y].isfull ||
+			grid[grid_x + 1][grid_y].isfull ||
+			grid[grid_x][grid_y + 1].isfull ||
+			grid[grid_x + 2][grid_y].isfull)
+			);
+	}
+	else
+	{
+		return (grid_x >= 0 && grid_x + 1 < grid.size())
+			&& (grid_y >= 0 && grid_y + 2 < grid[grid.size() - 1].size())
+			&& (!
+			(grid[grid_x][grid_y].isfull ||
+			grid[grid_x][grid_y + 1].isfull ||
+			grid[grid_x][grid_y + 2].isfull ||
+			grid[grid_x + 1][grid_y + 2].isfull)
+			);
+	}
 
 }
-void shape2::setFull(int mswitch) {
+void SevenGlyph::setFull(int mswitch) {
 
 	if (grid.empty())
 	{
@@ -271,7 +340,7 @@ void shape2::setFull(int mswitch) {
 		grid[grid_x + 2][grid_y + 1].isfull = true;
 
 	}
-	else
+	else if (mswitch==3)
 	{
 		grid[grid_x][grid_y].isfull = true;
 		grid[grid_x][grid_y + 1].isfull = true;
@@ -279,8 +348,39 @@ void shape2::setFull(int mswitch) {
 		grid[grid_x - 1][grid_y + 2].isfull = true;
 
 	}
+	
+	/*¾µÏñ*/
+	else if (mswitch == 4)
+	{
+		grid[grid_x][grid_y].isfull = true;
+		grid[grid_x + 1][grid_y].isfull = true;
+		grid[grid_x + 2][grid_y].isfull = true;
+		grid[grid_x + 2][grid_y - 1].isfull = true;
+
+	}
+	else if (mswitch == 5) {
+		grid[grid_x][grid_y].isfull = true;
+		grid[grid_x + 1][grid_y].isfull = true;
+		grid[grid_x + 1][grid_y + 1].isfull = true;
+		grid[grid_x + 1][grid_y + 2].isfull = true;
+
+	}
+	else if (mswitch == 6) {
+		grid[grid_x][grid_y].isfull = true;
+		grid[grid_x + 1][grid_y].isfull = true;
+		grid[grid_x][grid_y + 1].isfull = true;
+		grid[grid_x + 2][grid_y].isfull = true;
+	}
+	else
+	{
+		grid[grid_x][grid_y].isfull = true;
+		grid[grid_x][grid_y + 1].isfull = true;
+		grid[grid_x][grid_y + 2].isfull = true;
+		grid[grid_x + 1][grid_y + 2].isfull = true;
+
+	}
 }
-void shape2::rotate(int &block_x, int &block_y, int &swicth) {
+void SevenGlyph::rotate(int &block_x, int &block_y, int &swicth) {
 	if (getState() == 0)//ÓÉ³õÊ¼Ë³Ê±ÕëĞı×ª90
 	{
 		std::vector<int>changex = { 1,0,2,1 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
@@ -361,10 +461,173 @@ void shape2::rotate(int &block_x, int &block_y, int &swicth) {
 			grid_y = grid_y - changey[i];
 		}
 	}
+
+	else if (getState() == 4)//ÓÉÄæÊ±ÕëĞı×ª90
+	{
+		std::vector<int>changex = { 0, 0, -1, 1 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
+		std::vector<int>changey = { -1, 0, -1, -1 };
+
+		for (int i = 0; i < changex.size(); ++i)
+		{
+			grid_x = grid_x + changex[i];
+			grid_y = grid_y + changey[i];
+			if (isInrange(5))
+			{
+				block_x = grid_x;
+				block_y = grid_y;
+				swicth = 5;
+				break;
+			}
+			grid_x = grid_x - changex[i];
+			grid_y = grid_y - changey[i];
+		}
+	}
+	else if (getState() == 5)//¼ÌĞøĞı×ª90
+	{
+		std::vector<int>changex = { 0, -1, 1 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
+		std::vector<int>changey = { 1, 1, 1 };
+
+		for (int i = 0; i < changex.size(); ++i)
+		{
+			grid_x = grid_x + changex[i];
+			grid_y = grid_y + changey[i];
+			if (isInrange(6))
+			{
+				block_x = grid_x;
+				block_y = grid_y;
+				swicth = 6;
+				break;
+			}
+			grid_x = grid_x - changex[i];
+			grid_y = grid_y - changey[i];
+		}
+	}
+	else if (getState() == 6)//¼ÌĞøĞı×ª90
+	{
+		std::vector<int>changex = { 1, 0, 2, 1 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
+		std::vector<int>changey = { -1, -1, -1, 0 };
+
+		for (int i = 0; i < changex.size(); ++i)
+		{
+			grid_x = grid_x + changex[i];
+			grid_y = grid_y + changey[i];
+			if (isInrange(7))
+			{
+				block_x = grid_x;
+				block_y = grid_y;
+				swicth = 7;
+				break;
+			}
+			grid_x = grid_x - changex[i];
+			grid_y = grid_y - changey[i];
+		}
+	}
+	else if (getState() == 7)//¼ÌĞøĞı×ª90
+	{
+		std::vector<int>changex = { -1, -2, 0, -1 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
+		std::vector<int>changey = { 1, 1, 1, 2 };
+
+		for (int i = 0; i < changex.size(); ++i)
+		{
+			grid_x = grid_x + changex[i];
+			grid_y = grid_y + changey[i];
+			if (isInrange(4))
+			{
+				block_x = grid_x;
+				block_y = grid_y;
+				swicth = 4;
+				break;
+			}
+			grid_x = grid_x - changex[i];
+			grid_y = grid_y - changey[i];
+		}
+	}
+
 }
 
+void SevenGlyph::overturn(int &block_x, int &block_y, int &swicth){
+	if (getState() == 0)//ÓÉ³õÊ¼Ë³Ê±ÕëĞı×ª90
+	{
+		grid_x = grid_x;
+		grid_y = grid_y + 1;
+		if (isInrange(4))
+		{
+			block_x = grid_x;
+			block_y = grid_y;
+			swicth = 4;
+			return;
+		}
+		grid_x = grid_x;
+		grid_y = grid_y - 1;
+	}
+	else if (getState() == 1)//¼ÌĞøĞı×ª90
+	{
+		if (isInrange(5))
+		{
+			swicth = 5;
+			return;
+		}
+	}
+	else if (getState() == 2)//¼ÌĞøĞı×ª90
+	{
+		if (isInrange(6))
+		{
+			swicth = 6;
+			return;
+		}
+	}
+	else if (getState() == 3)//¼ÌĞøĞı×ª90
+	{
+		if (isInrange(7))
+		{
+			swicth = 7;
+			return;
+		}
+	}
+
+	else if (getState() == 4)//ÓÉÄæÊ±ÕëĞı×ª90
+	{
+		grid_x = grid_x;
+		grid_y = grid_y - 1;
+		if (isInrange(0))
+		{
+			block_x = grid_x;
+			block_y = grid_y;
+			swicth = 0;
+			return;
+		}
+		grid_x = grid_x;
+		grid_y = grid_y + 1;
+	}
+	else if (getState() == 5)//¼ÌĞøĞı×ª90
+	{
+		if (isInrange(1))
+		{
+			swicth = 1;
+			return;
+		}
+	}
+	else if (getState() == 6)//¼ÌĞøĞı×ª90
+	{
+		if (isInrange(2))
+		{
+			swicth = 2;
+			return;
+		}
+	}
+	else if (getState() == 7)//¼ÌĞøĞı×ª90
+	{
+		if (isInrange(3))
+		{
+			swicth = 3;
+			return;
+		}
+	}
+}
+
+
 /***************************************ÍÁ×Ö***************************************/
-void shape3::CreateBlocks(QPainter &painter, int mswitch) {
+void SoilGlyph::CreateBlocks(QPainter &painter, int mswitch) {
 	painter.setRenderHint(QPainter::Antialiasing, true);
 	// ÉèÖÃ»­±ÊÑÕÉ«¡¢¿í¶È
 	painter.setPen(QPen(QColor(0, 160, 230), 1));
@@ -405,7 +668,7 @@ void shape3::CreateBlocks(QPainter &painter, int mswitch) {
 		break;
 	}
 }
-bool shape3::isInrange(int mswitch) {
+bool SoilGlyph::isInrange(int mswitch) {
 
 	if (grid.empty())
 	{
@@ -461,7 +724,7 @@ bool shape3::isInrange(int mswitch) {
 	}
 
 }
-void shape3::setFull(int mswitch) {
+void SoilGlyph::setFull(int mswitch) {
 
 	if (grid.empty())
 	{
@@ -496,7 +759,7 @@ void shape3::setFull(int mswitch) {
 		grid[grid_x - 1][grid_y + 1].isfull = true;
 	}
 }
-void shape3::rotate(int &block_x, int &block_y, int &swicth) {
+void SoilGlyph::rotate(int &block_x, int &block_y, int &swicth) {
 	if (getState() == 0)//ÓÉ³õÊ¼Ë³Ê±ÕëĞı×ª90
 	{
 		std::vector<int>changex = { 0 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
@@ -580,7 +843,7 @@ void shape3::rotate(int &block_x, int &block_y, int &swicth) {
 }
 
 /***************************************Ì¨½××Ö***************************************/
-void shape4::CreateBlocks(QPainter &painter, int mswitch) {
+void StepGlyph::CreateBlocks(QPainter &painter, int mswitch) {
 	painter.setRenderHint(QPainter::Antialiasing, true);
 	// ÉèÖÃ»­±ÊÑÕÉ«¡¢¿í¶È
 	painter.setPen(QPen(QColor(0, 160, 230), 1));
@@ -604,10 +867,27 @@ void shape4::CreateBlocks(QPainter &painter, int mswitch) {
 		painter.drawRect(m_x + m_width, m_y, m_width, m_hight);
 		state = 1;
 		break;
+
+	case 2://Ë³Ê±ÕëĞı×ª90 ×îÉÏÃæµÄ·½¿é×÷Îª²Î¿¼µã
+		painter.drawRect(m_x, m_y, m_width, m_hight);
+		painter.drawRect(m_x, m_y + m_hight, m_width, m_hight);
+		painter.drawRect(m_x - m_width, m_y + m_hight, m_width, m_hight);
+		painter.drawRect(m_x - m_width, m_y + m_hight * 2, m_width, m_hight);
+		state = 2;
+		break;
+
+	case 3://Ë³Ê±ÕëĞı×ª90 ×îÉÏÃæµÄ·½¿é×÷Îª²Î¿¼µã
+		painter.drawRect(m_x, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y, m_width, m_hight);
+		painter.drawRect(m_x + m_width, m_y + m_hight, m_width, m_hight);
+		painter.drawRect(m_x + m_width * 2, m_y + m_hight, m_width, m_hight);
+		state = 3;
+		break;
 	}
 
+
 }
-bool shape4::isInrange(int mswitch) {
+bool StepGlyph::isInrange(int mswitch) {
 
 	if (grid.empty())
 	{
@@ -623,7 +903,7 @@ bool shape4::isInrange(int mswitch) {
 				grid[grid_x + 1][grid_y + 2].isfull)
 				);
 	}
-	else
+	else if (mswitch ==1)
 	{
 		return (grid_x - 1 >= 0 && grid_x + 1 < grid.size())
 			&& (grid_y >= 0 && grid_y + 1 < grid[grid.size() - 1].size())
@@ -634,9 +914,31 @@ bool shape4::isInrange(int mswitch) {
 					grid[grid_x - 1][grid_y + 1].isfull)
 				);
 	}
+	else if (mswitch == 2)
+	{
+		return (grid_x - 1 >= 0 && grid_x < grid.size())
+			&& (grid_y >= 0 && grid_y + 2 < grid[grid.size() - 1].size())
+			&& (!
+			(grid[grid_x][grid_y].isfull ||
+			grid[grid_x][grid_y + 1].isfull ||
+			grid[grid_x - 1][grid_y + 1].isfull ||
+			grid[grid_x - 1][grid_y + 2].isfull)
+			);
+	}
+	else 
+	{
+		return (grid_x >= 0 && grid_x + 2 < grid.size())
+			&& (grid_y >= 0 && grid_y + 1 < grid[grid.size() - 1].size())
+			&& (!
+			(grid[grid_x][grid_y].isfull ||
+			grid[grid_x + 1][grid_y].isfull ||
+			grid[grid_x + 1][grid_y + 1].isfull ||
+			grid[grid_x + 2][grid_y + 1].isfull)
+			);
+	}
 }
 
-void shape4::setFull(int mswitch) {
+void StepGlyph::setFull(int mswitch) {
 	if (grid.empty())
 	{
 		return;
@@ -648,16 +950,30 @@ void shape4::setFull(int mswitch) {
 		grid[grid_x + 1][grid_y + 1].isfull = true;
 		grid[grid_x + 1][grid_y + 2].isfull = true;
 	}
-	else
+	else if (mswitch==1)
 	{
 		grid[grid_x][grid_y].isfull = true;
 		grid[grid_x + 1][grid_y].isfull = true;
 		grid[grid_x][grid_y + 1].isfull = true;
 		grid[grid_x - 1][grid_y + 1].isfull = true;
 	}
+	else if (mswitch == 2)
+	{
+		grid[grid_x][grid_y].isfull = true;
+		grid[grid_x][grid_y + 1].isfull = true;
+		grid[grid_x - 1][grid_y + 1].isfull = true;
+		grid[grid_x - 1][grid_y + 2].isfull = true;
+	}
+	else 
+	{
+		grid[grid_x][grid_y].isfull = true;
+		grid[grid_x + 1][grid_y].isfull = true;
+		grid[grid_x + 1][grid_y + 1].isfull = true;
+		grid[grid_x + 2][grid_y + 1].isfull = true;
+	}
 }
 
-void shape4::rotate(int &block_x, int &block_y, int &swicth) {
+void StepGlyph::rotate(int &block_x, int &block_y, int &swicth) {
 	if (getState() == 0)//ÓÉ³õÊ¼Ë³Ê±ÕëĞı×ª90
 	{
 		std::vector<int>changex = { 1,0 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
@@ -696,11 +1012,117 @@ void shape4::rotate(int &block_x, int &block_y, int &swicth) {
 			grid_x = grid_x - changex[i];
 			grid_y = grid_y - changey[i];
 		}
+	}	
+
+
+
+
+	else if (getState() == 2)//ÓÉ³õÊ¼Ë³Ê±ÕëĞı×ª90
+	{
+		std::vector<int>changex = { -2, 1 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
+		std::vector<int>changey = { 1, 1 };
+		for (int i = 0; i < changex.size(); ++i)
+		{
+			grid_x = grid_x + changex[i];
+			grid_y = grid_y + changey[i];
+			if (isInrange(3))
+			{
+				block_x = grid_x;
+				block_y = grid_y;
+				swicth = 3;
+				break;
+			}
+			grid_x = grid_x - changex[i];
+			grid_y = grid_y - changey[i];
+		}
+	}
+	else if (getState() == 3)//¼ÌĞøĞı×ª90
+	{
+		std::vector<int>changex = { 2, -1 };//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ
+		std::vector<int>changey = { -1, -1 };
+
+		for (int i = 0; i < changex.size(); ++i)
+		{
+			grid_x = grid_x + changex[i];
+			grid_y = grid_y + changey[i];
+			if (isInrange(2))
+			{
+				block_x = grid_x;
+				block_y = grid_y;
+				swicth = 2;
+				break;
+			}
+			grid_x = grid_x - changex[i];
+			grid_y = grid_y - changey[i];
+		}
 	}
 }
 
+void StepGlyph::overturn(int &block_x, int &block_y, int &swicth){
+	if (getState() == 0)//ÓÉ³õÊ¼¾µÏñ
+	{
+		grid_x = grid_x + 1;
+		grid_y = grid_y;
+		if (isInrange(2))
+		{
+			block_x = grid_x;
+			block_y = grid_y;
+			swicth = 2;
+			return;
+		}
+		grid_x = grid_x-1;
+		grid_y = grid_y;
+	}
+	else if (getState() == 1)//ÓÉ³õÊ¼90Ğı×ª¾µÏñ
+	{
+		grid_x = grid_x - 1;
+		grid_y = grid_y;
+		if (isInrange(3))
+		{
+			block_x = grid_x;
+			block_y = grid_y;
+			swicth = 3;
+			return;
+		}
+		grid_x = grid_x + 1;
+		grid_y = grid_y;
+	}
+
+
+	else if (getState() == 2)
+	{
+		grid_x = grid_x - 1;
+		grid_y = grid_y;
+		if (isInrange(0))
+		{
+			block_x = grid_x;
+			block_y = grid_y;
+			swicth = 0;
+			return;
+		}
+		grid_x = grid_x + 1;
+		grid_y = grid_y;
+	}
+	else if (getState() == 3)//¼ÌĞøĞı×ª90
+	{
+		grid_x = grid_x + 1;
+		grid_y = grid_y;
+		if (isInrange(1))
+		{
+			block_x = grid_x;
+			block_y = grid_y;
+			swicth = 1;
+			return;
+		}
+		grid_x = grid_x - 1;
+		grid_y = grid_y;
+	}
+
+}
+
+
 /***************************************Ìï×Ö***************************************/
-void shape5::CreateBlocks(QPainter &painter, int mswitch) {
+void FieldGlyph::CreateBlocks(QPainter &painter, int mswitch) {
 	painter.setRenderHint(QPainter::Antialiasing, true);
 	// ÉèÖÃ»­±ÊÑÕÉ«¡¢¿í¶È
 	painter.setPen(QPen(QColor(0, 160, 230), 1));
@@ -738,7 +1160,7 @@ void shape5::CreateBlocks(QPainter &painter, int mswitch) {
 	//painter.drawRect(m_x + m_width, m_y + m_hight, m_width, m_hight);
 }
 
-bool shape5::isInrange(int mswitch) {
+bool FieldGlyph::isInrange(int mswitch) {
 
 	if (grid.empty())
 	{
@@ -768,7 +1190,7 @@ bool shape5::isInrange(int mswitch) {
 	}
 }
 
-void shape5::setFull(int mswitch) {
+void FieldGlyph::setFull(int mswitch) {
 	if (grid.empty())
 	{
 		return;
@@ -789,7 +1211,7 @@ void shape5::setFull(int mswitch) {
 	//}
 }
 
-void shape5::rotate(int &block_x, int &block_y, int &swicth) {
+void FieldGlyph::rotate(int &block_x, int &block_y, int &swicth) {
 	if (getState() == 0)//ÓÉ³õÊ¼Ë³Ê±ÕëĞı×ª90
 	{
 		std::vector<int>changex = { 0};//´Ó×óµ½ÓÒÒÀ´ÎÊÇĞèÒª×ª»»µÄÎ»ÖÃ£¬ÓÅÏÈ¼¶Öğ²½½µµÍ

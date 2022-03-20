@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>276</width>
-    <height>443</height>
+    <width>494</width>
+    <height>721</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -110,6 +110,13 @@
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="pushButton_overturn">
+          <property name="text">
+           <string>overturn</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton_right">
           <property name="text">
            <string>right</string>
@@ -134,7 +141,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>276</width>
+     <width>494</width>
      <height>23</height>
     </rect>
    </property>
@@ -170,8 +177,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="tetris.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

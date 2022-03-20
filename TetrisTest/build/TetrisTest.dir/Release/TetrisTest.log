@@ -1,0 +1,51 @@
+﻿生成启动时间为 2022/3/17 16:25:54。
+     1>项目“D:\Learning\C++\TetrisTest\build\TetrisTest.vcxproj”在节点 2 上(Build 个目标)。
+     1>PreBuildEvent:
+         setlocal
+         cd D:\Learning\C++\TetrisTest\build
+         if %errorlevel% neq 0 goto :cmEnd
+         D:
+         if %errorlevel% neq 0 goto :cmEnd
+         E:\Cmake\bin\cmake.exe -E cmake_autogen D:/Learning/C++/TetrisTest/build/CMakeFiles/TetrisTest_autogen.dir/AutogenInfo.cmake Release
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       CustomBuild:
+         Generating ui_tetris.h
+         Building Custom Rule D:/Learning/C++/TetrisTest/CMakeLists.txt
+       ClCompile:
+         E:\VS2013\VC\bin\x86_amd64\CL.exe /c /ID:\Learning\C++\TetrisTest\build /ID:\Learning\C++\TetrisTest /ID:\Learning\C++\TetrisTest\build\TetrisTest_autogen\include_Release /IE:\Qt5.10.0\5.10.0\msvc2017_64\include /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtWidgets /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtGui /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtANGLE /IE:\Qt5.10.0\5.10.0\msvc2017_64\include\QtCore /I"E:\Qt5.10.0\5.10.0\msvc2017_64\.\mkspecs\win32-msvc" /nologo /W3 /WX- /O2 /Ob2 /D WIN32 /D _WINDOWS /D NDEBUG /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D QT_NO_DEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"TetrisTest.dir\Release\\" /Fd"TetrisTest.dir\Release\vc120.pdb" /Gd /TP /errorReport:prompt D:\Learning\C++\TetrisTest\build\TetrisTest_autogen\mocs_compilation.cpp D:\Learning\C++\TetrisTest\BaseBlocks.cpp D:\Learning\C++\TetrisTest\Mainblock_Area.cpp D:\Learning\C++\TetrisTest\Nextblock_Area.cpp D:\Learning\C++\TetrisTest\blocks.cpp D:\Learning\C++\TetrisTest\logo.cpp D:\Learning\C++\TetrisTest\main.cpp D:\Learning\C++\TetrisTest\tetris.cpp
+         mocs_compilation.cpp
+         BaseBlocks.cpp
+         Mainblock_Area.cpp
+     1>D:\Learning\C++\TetrisTest\Mainblock_Area.cpp(167): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\Learning\C++\TetrisTest\Mainblock_Area.cpp(184): warning C4258: “j”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 D:\Learning\C++\TetrisTest\Mainblock_Area.cpp(155) : 忽略“j”的定义
+                 D:\Learning\C++\TetrisTest\Mainblock_Area.cpp(168) : 使用“j”的定义
+         Nextblock_Area.cpp
+         blocks.cpp
+     1>D:\Learning\C++\TetrisTest\blocks.cpp(1149): warning C4065: switch 语句包含“default”但是未包含“case”标签
+         logo.cpp
+         main.cpp
+         tetris.cpp
+         正在生成代码...
+       Link:
+         E:\VS2013\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Learning\C++\TetrisTest\build\Release\TetrisTest.exe" /INCREMENTAL:NO /NOLOGO E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Widgets.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Gui.lib E:\Qt5.10.0\5.10.0\msvc2017_64\lib\Qt5Core.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"D:/Learning/C++/TetrisTest/build/Release/TetrisTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Learning/C++/TetrisTest/build/Release/TetrisTest.lib" /MACHINE:X64  /machine:x64 TetrisTest.dir\Release\mocs_compilation.obj
+         TetrisTest.dir\Release\BaseBlocks.obj
+         TetrisTest.dir\Release\Mainblock_Area.obj
+         TetrisTest.dir\Release\Nextblock_Area.obj
+         TetrisTest.dir\Release\blocks.obj
+         TetrisTest.dir\Release\logo.obj
+         TetrisTest.dir\Release\main.obj
+         TetrisTest.dir\Release\tetris.obj
+         TetrisTest.vcxproj -> D:\Learning\C++\TetrisTest\build\Release\TetrisTest.exe
+     1>已完成生成项目“D:\Learning\C++\TetrisTest\build\TetrisTest.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:12.93

@@ -11,6 +11,6 @@ BaseBlocks::~BaseBlocks()
 }
 
 
-//void BaseBlocks::DrawShape1() {
+//void BaseBlocks::DrawOneGlyph() {
 //	
 //}
